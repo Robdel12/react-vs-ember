@@ -1,29 +1,27 @@
 import { beforeEach, describe, it } from '@bigtest/mocha';
 import { expect } from 'chai';
-
-import { setupAppForTesting } from '@bigtest/react';
-
+import { setupApplicationForTesting } from '../helpers'
 import {
-  interactor, text,
-  clickable, fillable, blurrable
+  interactor,
+  text,
+  clickable,
+  fillable,
+  blurrable
 } from '@bigtest/interactor';
 
-import Application from '@ui/application';
-
-import { describeApplication } from 'tests/helpers/setup-for-acceptance';
-
-@interactor
-class TodoMVCPage {
+@interactor class TodoMVCPage {
   headingText = text('h1');
   clickFirstTodo = clickable('ul.todo-list li:first-child');
   fillName = fillable('ul.todo-list li:first-child input');
 }
 
-describeApplication('Acceptance | todo editing', () => {
-  let app;
+describe('Acceptance | todo editing', () => {
+  let todo = new TodoMVCPage();
+
+  setupApplicationForTesting();
 
   it('renders', () => {
-    expect(new TodoMVCPage().headingText).to.equal('todos');
+    expect(todo.headingText).to.equal('todos');
   });
   //
   // beforeEach(async () => {

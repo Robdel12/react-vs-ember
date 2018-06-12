@@ -11,7 +11,7 @@
     "test": "yarn test:run",
     "webpack:build": "./node_modules/.bin/webpack-cli --config tests/webpack.config.js",
     "karma": "./node_modules/.bin/karma",
-    "karma:start": "yarn karma start ./tests/karma.conf.js --fail-on-empty-test-suite"
+    "karma:start": "karma start"
   },
   "dependencies": {
     "@types/enzyme": "^3.1.10",
@@ -26,7 +26,6 @@
     "@bigtest/mocha": "^0.3.3",
     "@bigtest/react": "^0.1.1",
     "@types/chai": "^4.1.3",
-    "@types/chai-dom": "^0.0.6",
     "@types/connect": "^3.4.32",
     "@types/jsdom": "^11.0.5",
     "@types/mocha": "^5.2.1",
@@ -40,7 +39,6 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "chai": "^4.1.2",
-    "chai-dom": "^1.8.0",
     "connect": "^3.6.6",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
@@ -48,7 +46,6 @@
     "jsdom": "^11.11.0",
     "jsdom-global": "^3.0.2",
     "karma": "^2.0.2",
-    "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^2.2.0",
     "karma-mocha": "^1.3.0",
     "karma-mocha-reporter": "^2.2.5",

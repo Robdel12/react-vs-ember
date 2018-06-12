@@ -8,9 +8,8 @@ function locate(path) {
 }
 
 module.exports = {
-  mode: 'none',
-  context: process.cwd(),
-  entry: locate('src/index.tsx'),
+  mode: 'development',
+  entry: locate('tests/acceptance/index.js'),
   module: {
     rules: [
       {
